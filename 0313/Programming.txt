@@ -1,0 +1,78 @@
+Programming
+1번
+x = int(input("x: "))
+y = int(input("y: "))
+
+print("두수의 합: ", x+y)
+print("두수의 차: ", x-y)
+print("두수의 곱: ", x*y)
+print("두수의 평균: ", (x+y)/2)
+print("큰수: ", max(x, y))
+print("작은수: ", min(x, y))
+
+2번
+pig = int(input("pig: "))
+cow = int(input("cow: "))
+chicken = int(input("chicken: "))
+
+legs = (pig * 4)  +  (cow * 4) + (chicken * 2)
+print(f"전체 다리의 수: {legs}")
+
+
+3번
+side1 = int(input("삼각형의 첫 번째 변의 길이: "))
+side2 = int(input("삼각형의 두 번째 변의 길이: "))
+maxside = side1 + side2 - 1
+print("삼각형의 나머지 변의 최대 길이 =", maxside)
+
+4번
+hour = int(input("시간을 입력하시오: "))
+minute = int(input("분을 입력하시오: "))
+second = (hour * 3600) + (minute * 60)
+print(f"{hour} 시간 {minute} 분은 {second} 초입니다")
+
+5번
+f = int(input("화씨를입력하시오: "))
+C = (f - 32.0) * 5/9
+print(f"화씨 {f}도는 섭씨 {C}도에 해당합니다")
+
+
+6번
+food=int(input("음식비용: "))
+sum = ( food ) + (food * 0.1)
+print(f"총액: {sum} 달러")
+
+7번
+
+x1 = float(input("x1="))
+y1 = float(input("y1="))
+x2 = float(input("x2="))
+y2 = float(input("y2="))
+distance = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
+print("두점 사이의 거리=", distance)
+
+9번
+n = int(input("정수="))
+s = 0
+s += n % 10
+n //= 10
+s += n % 10
+n //= 10
+s += n % 10
+n //= 10
+s += n % 10
+n //= 10
+print(s)
+
+11번
+drive = input("드라이브 이름: ")
+directory = input("디렉토리 이름: ")
+filename = input("파일 이름: ")
+extension = input("확장자: ")
+full_name = drive + ":" + directory + filename + "." + extension
+print("완전한 이름은", full_name)
+
+12번
+number = int(input("100000~999999 사이의 숫자를 입력하세요: "))
+print(f"쉼표 포함 결과: {number:,}")
+
