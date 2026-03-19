@@ -1,0 +1,44 @@
+도전문제
+73p
+speed = 60000.0
+distance = 40000000000000.0
+secs = distance / speed
+Light_year = secs / (60.0*60.0*24.0*365.0)
+print(Light_year,"광년" )
+
+77p
+PI = 3.141592
+radius = 5
+height = 10
+volume = PI * radius * radius * height
+print("반지름=" , radius , "높이" , height , "원기둥의 면적=" , volume)
+
+85p
+
+늘어날수록 점점 커진다
+
+95p
+stadium = input("경기장은 어디입니까?")
+winner = input("이긴팀은 어디입니까?")
+loser = input("진팀은 어디입니까?")
+vip = input("우수선수는 누구입니까?")
+score = input("스코어는 몇대몇입니까?")
+
+print("\n" + "="*42)
+print(f"오늘 {stadium}에서 야구 경기가 열렸습니다.")
+print(f"{winner}과 {loser}은 치열한 공방전을 펼쳤습니다.")
+print(f"{vip}이 맹활약을 하였습니다.")
+print(f"결국 {winner}가 {loser}를 {score}로 이겼습니다.")
+print("="*42)
+
+103p
+
+출력가능하다 
+
+105p
+
+weight = float(input("몸무게를 kg 단위로 입력하시오: "))
+height_cm = float(input("키를 cm 단위로 입력하시오: "))
+height_m = height_cm / 100
+bmi = (weight / (height_m**2))
+print(f"당신의 BMI= {bmi:.2f}")
