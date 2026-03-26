@@ -1,0 +1,266 @@
+Summary
+1. 조건문
+2. 조건식이 참이면 실행되는 문장
+   조건식이 거짓이면 실행되는 문장
+
+exercise
+
+1. 4번 false
+
+2.
+2번 
+
+3.
+a. if speed >= 60 and speed <=100:
+            print("정상속도")
+b. if x > y : max = x 
+    else: max=y
+c.
+ if op==1: print("one")
+ elif op ==2 : print("two")
+ elif op ==3 : print("three")
+
+4.
+a.  if 10 < X < 20:   b. if x < 10 or x > 20:
+       print(X)                   print(x)
+
+5.
+20살 이상  < 출력된다
+
+6.
+x y 가 같다고 표현할려면 x==y 를 써야한다
+
+7.
+temp = int(input("온도를 입력하시오: "))
+
+if temp < 0:
+state = "얼음"
+else :
+state = "기체"
+print(state)
+
+
+8.
+아래 논리 연산자 not을 이용하는것이 더욱 가독성이 좋다.
+
+9.
+print 부분 들여쓰기를 맞추어야한다
+
+10.
+if city != "서울" and city != "부산":
+
+11.
+b 비교연산이 하나 뿐이다.
+
+programming
+
+1.
+x = int(input("정수를 입력하시오: "))
+y = int(input("정수를 입력하시오: "))
+if x%y == 0 :
+print("약수입니다.")
+
+2.
+temp = int(input("현재온도를 입력하시오: "))
+
+if temp >= 25:
+    print("반바지")
+else:
+    print("긴바지")
+
+3.
+s = input("문자를 입력하시오: ")
+if s == 'R' or s=='r':
+print("Rectangle")
+elif s == 'T' or s=='t':
+print("Triangle")
+elif s == 'C' or s=='c':
+print("Circle")
+else :
+print("Unknown")
+
+4.
+radius = int(input("원의 반지름: "))
+
+if radius < 0:
+         print("잘못된 값입니다. 반지름은 0보다 커야 합니다.")
+        
+else:
+        area = 3.14 * radius ** 2
+       print(f"원의 면적: {area}")
+
+5.
+x, y, z = eval(input("3개의 정수를 입력하시오: "))
+if x > y : 
+if y < z: print("제일 작은 정수는 ", y, "입니다.")
+else : print("제일 작은 정수는 ", z, "입니다.")
+else: 
+if x < z: print("제일 작은 정수는 ", x, "입니다.")
+else : print("제일 작은 정수는 ", z, "입니다.")
+
+6.
+import random
+
+
+com = random.randint(1, 3)
+
+
+user = int(input("선택하시오(1: 가위, 2: 바위, 3: 보): "))
+
+
+print(f"컴퓨터의 선택(1: 가위, 2: 바위, 3: 보): {com}")
+
+
+if user == com:
+    print("비김")
+elif (user == 1 and com == 3) or (user == 2 and com == 1) or (user == 3 and com == 2):
+    print("내가 이겼음")
+else:
+    print("컴퓨터가 이겼음")
+
+7.
+h = int(input("키를 입력하시오(cm): "))
+age = int(input("나이를 입력하시오:  "))
+if h > 140 and age >= 10:
+print("타도 좋습니다.")
+else :
+print("죄송합니다.")
+
+8.
+h =int(input("키를 입력하시오:"))
+w =int(input("체중을 입력하시오:"))
+
+if (h-100) * 0.9 < w:
+    print("과체중")
+elif (h-100) * 0.9 > w:
+    print("저체중")
+else:
+    (h-100) * 0.9 == w
+    print("표준")
+
+9.
+import random
+
+x = random.randint(1, 10)
+y = random.randint(1, 10)
+op = random.randint(0, 4)
+
+if op == 0 :
+    answer = int(input(str(x) + " + "
+        + str(y) + "의 값은?"))
+    if x+y == answer:
+        print("맞았습니다.")
+    else:
+        print("틀렸습니다.")
+elif op == 1 :
+    answer = int(input(str(x) + " - "
+        + str(y) + "의 값은?"))
+    if x-y == answer:
+        print("맞았습니다.")
+    else:
+        print("틀렸습니다.")
+elif op == 2 :
+    answer = int(input(str(x) + " * "
+        + str(y) + "의 값은?"))
+    if x*y == answer:
+        print("맞았습니다.")
+    else:
+        print("틀렸습니다.")
+else :
+    answer = float(input(str(x) + " / "
+        + str(y) + "의 값은?"))
+    if x/y == answer:
+        print("맞았습니다.")
+    else:
+        print("틀렸습니다.")
+
+10.
+x = float(input("x를 입력하시오:"))
+
+if x >0:
+    print(7*x + 2)
+else:
+    X<=0
+    print(x*x-9+2)
+11.
+weight = float(input("무게(킬로그램): "))
+height = float(input("키(미터): "))
+
+bmi = weight / (height ** 2)
+
+print("당신의 BMI:", bmi)
+
+if 20 <= bmi <= 24.9:
+    print("정상입니다.")
+elif 25 <= bmi <= 29.9:
+    print("과체중입니다.")
+elif bmi >= 30:
+    print("비만입니다.")
+else:
+    print("저체중입니다.")
+
+12.
+year = int(input("연도를 입력하시오: "))
+
+
+r = year % 12
+
+
+animal = ["원숭이", "닭", "개", "돼지", "쥐", "소", "호랑이", "토끼", "용", "뱀", "말", "양"]
+
+
+print(f"{animal[r]}띠입니다.")
+
+13.
+year = int(input("연도를 입력하시오: "))
+if (year % 4 == 0 and year%100 !=0) or year%400==0 :
+    print("윤년입니다.")
+else:
+    print("윤년이 아닙니다.")
+
+14.
+import math
+
+a = float(input("a를 입력하시오: "))
+b = float(input("b를 입력하시오: "))
+c = float(input("c를 입력하시오: "))
+
+d = b**2 - 4*a*c
+
+if d > 0:
+    root_d = math.sqrt(d)
+    x1 = (-b + root_d) / (2 * a)
+    x2 = (-b - root_d) / (2 * a)
+    print(f"실근 두 개 존재: {x1:.4f} 와 {x2:.4f}")
+elif d == 0:
+    x = -b / (2 * a)
+    print(f"실근 하나(중근) 존재: {x:.4f}")
+else:
+    print("실근이 존재하지 않음")
+
+
+15.
+num = int(input("정수를 입력하시오: "))
+if num%3==0 and num%5==0: print('Python Express')
+elif num%3==0: print('Python')
+elif num%5==0: print('Express')
+
+16.
+ph = float(input("ph를 입력하시오: "))
+
+
+if ph < 7:
+    print("산")
+elif ph > 7:
+    print("알칼리")
+else:
+    print("중성")
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,156 @@
+중간점검 문제
+116p
+1.
+순차구조 선택구조 반복구조
+2.
+조건문 반복문
+
+120p
+1.
+블록
+
+2.
+참이면 if 다음 실행된 문장 그대로 거짓일시 else 아래에 있는 문장이 실행됨
+
+3.
+블록 묶어버린다.
+
+124p
+1.
+참 or 거짓
+
+2.
+두 실수 가 오차 이내로 아주 근접하면 같은 것으로 판정된다.
+
+
+126p
+1.
+s ="minor" if age < 21 else "adult"
+
+132p
+1.
+age >= 25 and salary >= 3500
+
+2.
+False
+
+도전문제
+
+125p
+1.
+improt random
+x = random.randint(1,100)
+y = random.randint(1,100)
+
+answer = int(input(f"{x} - {y} =" ))
+flag = (answer == (x-y))
+print(flag)
+
+127p
+1.
+n = int(input("정수를 입력하시오: "))
+
+if n >= 0:
+       print("양수.")
+else:
+       print("음수.")
+2.
+score = int(input("성적을 입력하시오: "))
+
+if score >= 60:
+        print("합격.")
+   
+else:
+        print("불합격")
+
+133p
+temp = float(input("화씨온도를 입력하시오: "))
+
+
+if temp <= 32:
+    # 32도 이하일 때
+    print("물의 상태는 얼음입니다.")
+elif temp > 32 and temp < 212 :
+   
+    print("물의 상태는 액체입니다.")
+else:
+   
+    print("물의 상태는 기체입니다.")
+ 
+134p
+import random  
+
+print("주사위 던지기 게임을 시작합니다. ")
+
+dice = random.randrange(6)
+
+print(f"주사위 눈: {dice}")
+
+142p
+import random  
+
+print("행운의 매직볼로 오늘의 운세를 출력합니다. ")
+
+answers = random.randint(1,8)
+
+if answers == 1:
+    print("good")
+elif answers ==2:
+    print("not bad")
+elif answers ==3:
+    print("bad")
+elif answers ==4:
+    print("die")
+elif answers ==5:
+    print("God")
+
+143p
+print("==================")
+print("메뉴 1번:치즈버거")
+print("메뉴 2번:치킨버거")
+print("메뉴 3번:불고기버거")
+print("메뉴 4번:콜라")
+print("메뉴 5번:아이스크림")
+print("===================")
+
+selection = int(input("메뉴를 선택하세요"))
+
+if selection >= 1 and selection <= 5:
+    print("메뉴" , selection)
+else:
+    print("잘못입력하셨습니다.")
+
+144p
+import random
+
+
+computer_choice = random.randint(1,3)
+user_choice = int(input("어디를 수비하시겠어요?(왼찍:1,중앙: 2,오른쪽:3)"))
+if 1 <= user_choice <= 3:
+    if computer_choice == user_choice:
+        print("수비를 성공하셨습니다.")
+    else:
+         print("패널티킥이 성공하였습니다.")
+else:
+    print("잘못입력했습니다.")
+
+146p
+a =int(input("삼각형의 한 변을 입력하시오: "))
+b =int(input("삼각형의 한 변을 입력하시오: "))
+c =int(input("삼각형의 한 변을 입력하시오: "))
+
+angle1 = int(input("첫 번째 내각을 입력하시오: "))
+angle2 = int(input("두 번째 내각을 입력하시오: "))
+angle3 = int(input("세 번째 내각을 입력하시오: "))
+
+if (a+b) > c and (b+c) > a and ( a + c) > b:
+    print("올바른 삼각형")
+else:
+    print("올바르지 않은 삼각형")
+if angle1 + angle2 + angle3 != 180:
+        print(f"내각의 합 {angle1 + angle2 + angle3}도")
+
+
+
+
+
