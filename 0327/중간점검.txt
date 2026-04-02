@@ -1,0 +1,197 @@
+중간점검
+176p
+1.
+if문은 참인순간 종료되고 while문은 그 조건이 끝나지 않는 이상 계속 반복되다가 끝난다.
+
+2.
+for문은 반복 구조 이고 while은 어떤 조건에서의 반복 구조이다 그래서 횟수가 정해져있다면 for문이 좋고 어느 상황에서 조건부까지 반복을 원한다면 while이 좋다.
+
+183p
+1.
+0 곱하기 0 은 0
+0 곱하기 1 은 0
+0 곱하기 2 은 0
+1 곱하기 0 은 0
+1 곱하기 1 은 1
+1 곱하기 2 은 2
+2 곱하기 0 은 0
+2 곱하기 1 은 2
+2 곱하기 2 은 4
+
+189
+1.
+braek
+
+2.
+1
+2
+
+도전문제
+
+171p
+1. 검사 횟수와 소수점 자리가 더커져 더 정밀하게 해를 계산한다.
+
+177p
+1.
+dan = int(input("원하는 단은: "))
+
+for i in range(1, 10):
+    print(f"{dan} x {i} = {dan * i}")        for이 더 편함
+
+179p
+1.
+import random
+
+tries = 0
+guess = 0
+answer = random.randint(1,100)
+
+print("1부터 100 사이의 숫자를 맞추시오")
+
+while guess !=answer and tries < 10:
+    guess = int(input("숫자를 입력"))
+    tries = tries + 1
+    if guess < answer :
+        print("너무 낮음!")
+    elif guess > answer:
+        print("너무 높음")
+
+if guess == answer:
+    print("축하합니다. 시도횟수=" , tries)
+else:
+    print("정답은" , answer)
+
+180p
+1.
+import random
+
+flag = True
+
+while flag:
+    x = random.randint(1, 100)
+    y = random.randint(1, 100)
+    
+    if random.randint(0, 1) == 0:
+        answer = int(input(f"{x} + {y} = "))
+        if answer == x + y:
+            print("잘했어요!!")
+        else:
+            print("틀렸어요. 하지만 다음번에는 잘할 수 있죠?")
+            flag = False
+    else:
+        answer = int(input(f"{x} - {y} = "))
+        if answer == x - y:
+            print("잘했어요!!")
+        else:
+            print("틀렸어요. 하지만 다음번에는 잘할 수 있죠?")
+            flag = False
+
+2.
+import random
+
+flag = True
+
+while flag:
+    x = random.randint(1, 100)
+    y = random.randint(1, 100)
+    answer = int(input(f"{x} + {y} = "))
+    
+    if answer == x + y:
+        print("잘했어요!!")
+        flag = False
+    else:
+        print("틀렸어요. 다시 도전해보세요!")
+
+
+181p
+1.
+id = "ppyy"
+pw = "pythonisfun"
+
+while True:
+    input_id = input("아이디를 입력하시오: ")
+    input_pw = input("암호를 입력하시오: ")
+
+    if input_id == id and input_pw == pw:
+        print("로그인 성공!")
+        break  
+    else:
+        print("로그인 실패")
+
+184p
+1.
+import random
+
+count = 0
+trials = 1000
+
+for i in range(trials):
+    dice1 = random.randint(1, 6)
+    dice2 = random.randint(1, 6)
+    
+    if dice1 + dice2 == 6:
+        count = count + 1
+
+print(f"1000번 던져서 합이 6이 나온 횟수: {count}번")
+print(f"실제 실험 확률: {count / trials}")
+print(f"이론적 확률 (5/36): {5 / 36}")
+
+185p
+persons = [ "Kim" , "Park" , "Lee"]
+restaurants = [ "Korean" , "American" , "French"]
+locations = [ "서울" , "부산" , "대전"]
+
+for person in persons:
+    for restaurant in restaurants:
+        for location in locations:
+             print(person + "이 " + location + "에" + restaurant + " 식당을 방문")
+188p
+number = 2
+
+while number <= 100:
+    divisor = 2
+    prime = True
+    while divisor < number:
+        if number % divisor == 0:
+            prime = False
+            break
+        divisor += 1
+    if prime:
+        print(number, end=" ")
+    number += 1
+
+194p
+확률이 점점 올라가니까 성공 횟수가 늘어난다.
+
+
+1.
+pi = 3.0
+loop_count = int(input("반복횟수: "))
+
+for i in range(1, loop_count + 1):
+    n = 2 * i
+    divisor = n * (n + 1) * (n + 2)
+    
+    if i % 2 == 1:
+        pi += 4 / divisor
+    else:
+        pi -= 4 / divisor
+
+print(f"Pi = {pi:.15f}")
+
+
+
+
+
+2.
+sum = 0.0
+divisor = 1.0
+divident = 4.0
+loop_count = int(input("반복횟수: "))
+
+for _ in range(loop_count):
+    sum += divident / divisor
+    divident *= -1.0
+    divisor += 2
+
+print(f"for 문으로 계산한 Pi = {sum:f}")
