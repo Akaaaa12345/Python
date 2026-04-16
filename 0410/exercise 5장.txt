@@ -1,0 +1,210 @@
+exercise
+1.a, b
+
+2.10
+
+3. c
+
+4.  0 이유는 min = 0 전역변수 이기때문에
+
+5. 9
+
+6. x의 값이 0보다 크거나 같을 경우(x >= 0), 변수 y가 나오지 않는다.
+
+7.
+2 3
+10 3
+5 6
+2 10
+
+8. 30 -10
+
+9. local_var은 지역 변수이므로 함수의 외부에서 접근할 수 없다
+
+프로그래밍 
+1. def get_peri(radius = 5.0):
+    p = 2.0*3.141692* radius
+    return p
+
+print("get_peri()=", get_peri()) 
+print("get_peri(4.0)=", get_peri(4.0))
+2. 
+def add(a, b): return a + b
+def sub(a, b): return a - b
+def mul(a, b): return a * b
+def div(a, b): return a / b
+
+x = int(input("첫 번째 정수를 입력하시오: "))
+y = int(input("두 번째 정수를 입력하시오: "))
+
+print(f"( {x} + {y} ) = {add(x, y)}")
+print(f"( {x} - {y} ) = {sub(x, y)}")
+print(f"( {x} * {y} ) = {mul(x, y)}")
+print(f"( {x} / {y} ) = {div(x, y)}")
+
+
+3.
+def calc(a, b):
+    return a+b, a-b, a*b, a/b
+
+x = int(input("첫 번째 정수를 입력하시오: "))
+y = int(input("첫 번째 정수를 입력하시오: "))
+a,b,c,d = calc(x, y)
+print(a, b, c, d, "가 반환되었습니다")
+
+4.
+
+def getGrade(score):
+    if score >= 90: return "A"
+    elif score >= 80: return "B"
+    elif score >= 70: return "C"
+    elif score >= 60: return "D"
+    else: return "F"
+
+score = int(input("점수를 입력하세요: "))
+print(f"성적은 {getGrade(score)} 입니다")
+
+
+5.
+
+def checkpassword(s):
+    digit, lower, upper = 0, 0, 0
+    for i in s:
+        if i.isupper():
+            upper = 1
+        elif i.islower():
+            lower = 1
+        elif i.isdigit():
+            digit = 1
+    if upper and lower and digit: print("사용할 수 있습니다.")
+    else: print("사용할 수 없습니다.")
+
+checkpassword("abcA")
+
+6. def make_question(a, b):
+    print(f"정수 {a}+{b}의 합은?")
+
+n1 = int(input("첫 번째 정수를 입력하시오: "))
+n2 = int(input("두 번째 정수를 입력하시오: "))
+make_question(n1, n2)
+
+7.
+def getIntRange(a, b, msg):
+    x =-100
+    while x < a or x > b:
+        x = int(input(msg))
+    return x
+
+m = getIntRange(1, 12, "월을 입력하시오(1부터 12사이의 값): ")
+d = getIntRange(1, 31, "일을 입력하시오(1부터 31사이의 값): ")
+print(f"입력된 날짜는 {m}월 {d}일입니다.")
+
+8.def getMoneyText(amount):
+    units = ["", "십", "백", "천"]
+    nums = ["", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구"]
+    res = ""
+    s_amount = str(amount) # 숫자를 문자열로 변환 (예: "999")
+    
+    for i in range(len(s_amount)):
+        digit = int(s_amount[-(i+1)])         
+        if digit != 0:
+            res = nums[digit] + units[i] + res
+    
+    return res + "원"
+
+money = int(input("1000 이하의 금액을 입력하시오: "))
+print(getMoneyText(money))
+
+9.
+def getGCD(a, b):
+    gcd = 1 
+    i = 2   
+
+    while i <= a and i <= b:
+        if a % i == 0 and b % i == 0:
+            gcd = i 
+        i = i + 1
+
+    return gcd 
+
+x = int(input("첫 번째 정수: "))
+y = int(input("두 번째 정수: "))
+
+print(getGCD(x, y))
+
+10.
+def testPrime(n):
+    if n < 2: return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+
+
+for i in range(2, 101):
+    if testPrime(i):
+        print(i, end=' ')
+
+11.
+def deci2bin(n):
+    binary = ""
+
+    while n != 0:
+        value = n % 2
+        if value == 0 :
+            binary = "0" + binary 
+        else:
+            binary = "1" + binary
+        n = n // 2
+        
+    return binary
+
+x = int(input("10진수: "))
+print(deci2bin(x))
+
+12.
+def getSorted(x, y):
+    if x > y:
+        return y, x     
+    else:
+        return x, y  
+n1 = int(input("첫 번째 정수: "))
+n2 = int(input("두 번째 정수: "))
+
+print(getSorted(n1, n2))
+
+13.
+import random
+
+def dice_game() :
+    human = random.randint(1,6)
+    print("인간: 주사위값=", human )
+    ai = random.randint(1,6)
+    print("컴퓨터: 주사위값=", ai )
+
+    if human > ai :
+        print("인간승리") 
+    else:
+        print("컴퓨터승리")  
+
+def main() : 
+    while True:
+        dice_game()    
+        user = input("중단할까요? Y/N")
+        if user == "Y" or user == "y":
+            break;
+
+main()
+
+
+14.
+
+def test(x, g):
+    if abs(x/g - g) < 0.0001:
+        return g
+    else:
+        new_g = (g + x/g) / 2
+        return test(x, new_g)
+
+result = test(2.0, 1.0)
+print(f"결과: {result}")
