@@ -1,0 +1,263 @@
+중간점검
+370p
+1.객체
+2.서로 관련된 데이터와 함수를 묶을 수가 없다.
+3.데이터 와 함수를 하나의 덩어리로 묶는것
+4.객체에 대한 설계도
+5.클래스로부터 만들어지는 객체를 그클래스
+6.설계도와 제품의 관계이다.
+
+376p
+1.class키워드를 사용한다
+2.첫글자는 대부분 대문자이다.
+3.클래스 이름뒤에 ()
+4.점(.)
+5.클래스 내부에 정의되어 특정 객체의 기능이나 행동을 처리하는 함수
+6.인스턴스 변수나 다른 메서드에 접근이 가능하다.
+7.초기화하는 목적
+
+383p
+1.외부에서 마음대로 변경하지못하게 함
+2.get , set 사용
+3.(__) 사용
+
+388p
+1.함수 안에서 객체의 내부 값을 변경하면 함수 밖의 원본 객체도 함께 변경됨.
+2.Television 객체가 메모리에 생성되고 t 변수가 그 객체의 주소를 가리키게 된다.
+
+391p
+1.인스턴트는 객체 내부에 각각 독립적으로 생성되는 변수 클래스변수는 모든객체가 공동으로 공유하는 변수
+2.바깥 공간에 변수를 선언하고 값을 대입.
+
+394p
+1.print()로 호출
+2.__eq__()
+
+exercise.
+1. 
+class MyClass:
+  self.data = 12
+
+p = MyClass()
+print(p.data)
+
+2.
+__init__
+
+3.
+Good Morning
+
+4.
+self 가 빠져있다.
+
+5.
+class MyClass:
+def __init__(self, r):
+self.__radius = r
+
+a = MyClass(10)
+print(a.__radius)
+
+6.
+1
+
+7.
+Bark!, Animal sound
+
+프로그래밍
+
+1.
+class Cat:
+   def __init__(self, name, age):
+      self.__name = name
+      self.__age = age
+
+   def setName(self, name):
+      self.__name = name
+
+   def getName(self):
+      return self.__name
+
+   def setAge(self, age):
+      self.__age = age
+
+   def getAge(self):
+      return self.__age
+
+
+missy = Cat('Missy', 3)
+lucky = Cat('Lucky', 5)
+
+print (missy.getName(), missy.getAge())
+print (lucky.getName(), lucky.getAge())
+
+2.
+class Rocket:
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+
+    def __str__(self):
+        return f"로켓의 위치 - x: {self.x}, y: {self.y}"
+
+    def moveUp(self):
+        self.y += 1
+
+3.
+class Box():
+    def __init__(self, l, h, d):
+        self.length=l
+        self.height=h
+        self.depth=d
+        
+    def __str__(self):
+        return "("+str(self.length)+","+str(self.height)+","+str(self.depth)+")"
+
+    def getLength(self):
+        return self.length
+
+    def getHeight(self):
+        return self.height
+
+    def getDepth(self):
+        return self.depth
+
+b1 = Box(100, 100, 100)
+print(b1)
+print("상자의 부피는", b1.getHeight()*b1.getLength()*b1.getDepth())
+
+4.
+class Rectangle:
+    def __init__(self, x, y, w, h):
+        self.x = x
+        self.y = y
+        self.width = w
+        self.height = h
+
+    def __str__(self):
+        return f"Rectangle(x={self.x}, y={self.y}, w={self.width}, h={self.height})"
+
+    def setX(self, x): self.x = x
+    def getX(self): return self.x
+    def setY(self, y): self.y = y
+    def getY(self): return self.y
+    def getArea(self): return self.width * self.height
+
+    def overlap(self, r):
+        if (self.x + self.width <= r.x or r.x + r.width <= self.x or
+            self.y + self.height <= r.y or r.y + r.height <= self.y):
+            return False
+        return True
+
+r1 = Rectangle(0, 0, 100, 100)
+r2 = Rectangle(10, 10, 100, 100)
+
+if r1.overlap(r2):
+    print("r1과 r2는 서로 겹칩니다.")
+else:
+    print("r1과 r2는 겹치지 않습니다.")
+
+5.
+class Triangle():
+     def __init__(self,angle1,angle2,angle3):
+         self.angle1=angle1
+         self.angle2=angle2
+         self.angle3=angle3
+
+     numberOfSides=3
+     def checkAngles(self):
+         if self.angle1+self.angle2+self.angle3 ==180:
+             return True
+         else:
+             return False
+
+triangle=Triangle(90,30,60)
+print(triangle.checkAngles())
+
+6.
+class Person:
+    def __init__(self, name, mobile=None, office=None, email=None):
+        self.name = name
+        self.mobile = mobile
+        self.office = office
+        self.email = email
+
+    def __str__(self):
+        res = f"{self.name}\n"
+        if self.office:
+            res += f"office phone:  {self.office}\n"
+        if self.email:
+            res += f"email address: {self.email}\n"
+        return res.strip()
+
+    def setName(self, name): self.name = name
+    def getName(self): return self.name
+    def setMobile(self, mobile): self.mobile = mobile
+    def getMobile(self): return self.mobile
+    def setOffice(self, office): self.office = office
+    def getOffice(self): return self.office
+    def setEmail(self, email): self.email = email
+    def getEmail(self): return self.email
+
+p1 = Person("Kim", office="1234567", email="kim@company.com")
+p2 = Person("Park", office="2345678")
+p2.setEmail("park@company.com")
+
+7.
+
+class Person():
+    def __init__(self, name,
+                 mobile=None, office=None, email=None):
+        self.name = name
+        self.mobile = mobile
+        self.office = office
+        self.email = email
+
+    def setMobile(self, number):
+        self.mobile = number
+
+    def setOffice(self, number):
+        self.office = number
+
+    def setEmail(self, address):
+        self.email = address
+    def __str__(self):
+        s = ''
+        s += self.name + '\n'
+        s += "office phone:"+self.office + '\n'
+        s += "email address:"+self.email + '\n'
+        return s
+
+class PhoneBook():
+    def __init__(self):        
+        self.contacts = {}
+
+    def add(self, name, mobile=None, office=None,
+            email=None):
+        p = Person(name, mobile, office, email)
+        self.contacts[name] = p
+    def __str__(self):
+        s = ''
+        for p in sorted(self.contacts):
+            s += str(self.contacts[p]) + '\n'
+        return s
+
+obj = PhoneBook()
+obj.add("Kim", office="1234567", email="kim@company.com")
+obj.add("Park", office="2345678", email="park@company.com")
+print(obj)
+
+8.
+class Song:
+    def __init__(self, lyrics):
+        self.lyrics = lyrics
+
+    def sing(self):
+        for line in self.lyrics:
+            print(line)
+
+aSong = Song(["TWINKLE, twinkle, little star",
+              "How I wonder what you are!",
+              "Up above the world so high,",
+              "Like a diamond in the sky."])
+aSong.sing()
